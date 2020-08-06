@@ -1,0 +1,33 @@
+@media screen and (max-width: 400px) {
+    main{
+        grid-template-columns: minmax(100px, 50%) minmax(100px, 50%);
+        grid-template-rows: 400px 1fr;
+        width: 100%;
+    }
+
+    main .grid {
+        grid-template-rows: 500px 1fr;
+    }
+
+    main .menu {
+        grid-row: 1;
+        grid-column: 1/-1;
+    }
+
+    main .menu #options option{
+        width: 100px;
+        background-color: lawngreen;
+    }
+
+    main .sala-pokemon {
+        grid-row: 2;
+        grid-column: 1/-1;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    body {
+        width: 97%;
+    }
+
+}

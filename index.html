@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon"  href="template/unnamed.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Armata&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="estilos-card.css">
+    <title>Pokédex</title>
+</head>
+
+<body>
+    <header id="encabezado">
+        <img src="template/Pokemon-Logo.png">
+    </header>
+    <main>
+        <section class="menu">
+                <header>
+                    <label for="selecionar">
+                        <input type="text" placeholder="seleciona tu pokemon" name="selecionar" id="selecionar" list="options" >
+                        <datalist id="options">
+                            <!--options-->
+                        </datalist>
+                    </label>
+                    <div id="agregar" >
+                        <span id="btn" >Agregar</span>
+                    </div>
+                </header>
+                <div id="selected">
+                    <img  id="img-selected" src="template/unnamed.png">
+                </div>
+                <img  id="loader" src="template/loader.png" alt="">
+        </section>
+        <section class="sala-pokemon">
+            
+        </section>
+    </main>
+    
+    <script src="functions.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    min-height: 100vh;
+    height: auto;
+    width: 95%;
+    margin: auto;
+    font-family:  'Raleway', sans-serif;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    background: url('template/body.png');
+
+}
+
+/* HEADER */
+
+#encabezado {
+    width: 100%;
+    height: 100px;
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#encabezado img {
+    height: 100px;
+}
+
+/* MAIN */
+
+main{
+    grid-row: 2;
+    background-color: none;
+    height: auto;
+    flex-grow: 2;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: minmax(280px, 330px) minmax(450px ,1fr);
+    gap: 10px;
+}
+
+
+/*  MAIN > MENU */
+main .menu {
+    background-color: #e4e4df;
+    max-height: 400px;
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* MAIN MENU HEADER */
+
+main .menu header {
+    height: 80px;
+    background-color: rgb(255, 74, 42);
+    z-index: 100;
+}
+
+main .menu header label {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 0;
+    padding: 0;
+}
+
+label input, input:hover, input:active{
+    width: 90%;
+    padding: 5px;
+}
+
+/* MAIN MENU AGREGAR */
+main .menu #agregar {
+    background-color: #e4e4df;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+main .menu #agregar span {
+    width: 80%;
+    height: 30px;
+    margin: auto;
+    border: none;
+    background-color: rgb(63, 106, 248);
+    box-shadow: rgba(0, 0, 0, 0.6) 0 1px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 900;
+    border-radius: 3px;
+    transition: 0.2s ease-in-out;
+}
+
+main .menu #agregar span:active {
+    box-shadow: rgba(0,0,0, 0.2) 0 3px 3px;
+}
+
+/* MAIN MENU SELECTED */
+
+main .menu #selected {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 2;
+    width: 100%;
+    background: #e4e4df;
+    z-index: 0;
+}
+
+main .menu #selected img {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* MAIN > SALA POKEMON */
+.sala-pokemon {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: left;
+
+}
+
+
+
+
+/* LOADER */
+
+main #loader{
+    width: 30px;
+    
+    z-index: 120;
+    position: relative;
+    margin: auto;
+    bottom: 5px;
+
+    animation-name: animacion;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    display: none;
+}
+
+@keyframes animacion{
+    0% {
+        transform: rotate(180deg);
+    }
+}
