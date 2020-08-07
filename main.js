@@ -1,10 +1,3 @@
-// COMBERTIMOS A FORMATO JSON
-//let texto = JSON.stringify(lista_pkm);
-//console.log(texto)
-
-
-// RECUPERAMOS DESDE EL FORMATO JSON
-// let pokemons = JSON.parse(texto);
 
 let salaPkm = document.querySelector('.sala-pokemon');
 let options = document.getElementById('options');
@@ -18,7 +11,9 @@ let listaPkm = [];
 
 // MAIN 
 window.onload = function(){
-      traerPkms(1, 60);
+    loader.classList.add('mostrar')
+    traerPkms(1, 100);
+    loader.classList.remove('mostrar')
 }
 
 input.addEventListener('click',()=>{
@@ -26,7 +21,7 @@ input.addEventListener('click',()=>{
 })
 
 input.addEventListener('change', ()=>{
-    loader.style.display = 'block';
+    loader.classList.add('mostrar')
     
     let selecion = input.value;
     actualizarSelecion(selecion);
@@ -36,7 +31,7 @@ input.addEventListener('change', ()=>{
         btn.style.opacity = 1;
     }
     
-    loader.style.display = 'none';
+    loader.classList.remove('mostrar')
 })
 
 btn.onclick = ()=> {
@@ -50,7 +45,3 @@ btn.onclick = ()=> {
         btn.style.opacity = 0.7;
     }
 }
-
-
-
-
