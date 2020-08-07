@@ -118,7 +118,7 @@ main .card .tipo .electric {
 @media screen and (max-width: 450px){
 
     .sala-pokemon {
-        padding: 10px 3px;
+        padding: 10px 0px;
         
         justify-content: space-evenly;
     }
@@ -128,5 +128,8 @@ main .card .tipo .electric {
         height: 210px;
         margin: 0;
         margin: 7px 7px;
+    }
+    .card .card-main .tipo *{
+        margin-left: 3px;
     }
 }
