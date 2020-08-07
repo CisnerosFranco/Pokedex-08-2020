@@ -82,7 +82,7 @@ label input, input:hover, input:active{
 /* MAIN MENU AGREGAR */
 main .menu #agregar {
     background-color: #e4e4df;
-    height: 40px;
+    height: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -91,22 +91,25 @@ main .menu #agregar {
 
 main .menu #agregar span {
     width: 80%;
-    height: 30px;
+    height: 35px;
+    margin-top: 5px;
     margin: auto;
     border: none;
-    background-color: rgb(63, 106, 248);
-    box-shadow: rgba(0, 0, 0, 0.6) 0 1px 5px;
+    background-color: rgb(48, 96, 253);
+    box-shadow: rgba(0, 0, 0, 0.4) 0 3px 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
     font-weight: 900;
     border-radius: 3px;
-    transition: 0.2s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
+
+
 main .menu #agregar span:active {
-    box-shadow: rgba(0,0,0, 0.2) 0 3px 3px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 1px 5px;
 }
 
 /* MAIN MENU SELECTED */
@@ -141,9 +144,6 @@ main .menu #selected img {
 
 }
 
-
-
-
 /* LOADER */
 
 main #loader{
@@ -160,6 +160,12 @@ main #loader{
     animation-iteration-count: infinite;
     display: none;
 }
+
+main .mostrar {
+    display: block;
+}
+
+
 
 @keyframes animacion{
     0% {
