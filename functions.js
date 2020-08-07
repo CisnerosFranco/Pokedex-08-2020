@@ -1,15 +1,21 @@
 
-async function traerPkms(inicio, fin){
+function traerPkms(inicio, fin){
     for(let i=inicio; i<=fin; i++){
-       await traer(i);
-       actualizarOptions();
+       traer(i);
     }
 }
 
 async function traer(id){
     let objeto = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`); 
     let dato = await objeto.json()
-    listaPkm.push(dato);      
+    listaPkm.push(dato);
+    
+    // añadimos a la lista de opciones
+    let option = document.createElement('option');
+    option.className = dato.id;          
+    option.innerHTML = dato.name;
+    option.value = dato.name;
+    options.appendChild(option);
 }
 
 function actualizarSelecion(dato) {
@@ -18,19 +24,6 @@ function actualizarSelecion(dato) {
         let url = pokemon.sprites.other.dream_world.front_default;
         pkmSelected.src = url;
     }
-}
-
-function actualizarOptions() {
-    let fragmento = document.createDocumentFragment();
-    listaPkm.forEach(element=>{
-        let option = document.createElement('option');
-        option.className = element.id;          
-        option.innerHTML = element.name;
-        option.value = element.name;
-        fragmento.appendChild(option);
-    })
-    options.innerHTML = "";
-    options.appendChild(fragmento);
 }
 
 
